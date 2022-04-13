@@ -14,7 +14,7 @@ class AuthController extends Controller
             'email' => 'required|email|string|unique:users,email',
             'password' => [
                 'required',
-                'confirmend',
+                'confirmed',
                 Password::min(8)->mixedCase()->numbers()->symbols()
             ]
         ]);
