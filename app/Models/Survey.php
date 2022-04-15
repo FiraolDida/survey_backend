@@ -22,7 +22,7 @@ class Survey extends Model
 
     public function getSlugOptions(): SlugOptions {
         return SlugOptions::create()
-            ->generatesSlugsFrom('title')
+            ->generateSlugsFrom('title')
             ->saveSlugsTo('slug');
     }
 }
