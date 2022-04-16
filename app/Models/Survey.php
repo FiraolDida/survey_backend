@@ -13,6 +13,7 @@ class Survey extends Model
 
     protected $fillable = [
         'user_id',
+        'image',
         'title',
         'slug',
         'status',
@@ -22,7 +23,7 @@ class Survey extends Model
 
     public function getSlugOptions(): SlugOptions {
         return SlugOptions::create()
-            ->generatesSlugsFrom('title')
+            ->generateSlugsFrom('title')
             ->saveSlugsTo('slug');
     }
 }
