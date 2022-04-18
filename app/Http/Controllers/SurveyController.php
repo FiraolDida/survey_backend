@@ -216,4 +216,15 @@ class SurveyController extends Controller
 
         return $question->update(($validator->validated()));
     }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\Survey  $survey
+     * @return \Illuminate\Http\Response
+     */
+    public function showForGuest(Survey $survey)
+    {
+        return new SurveyResource($survey);
+    }
 }
